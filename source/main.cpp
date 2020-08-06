@@ -10,7 +10,12 @@
 using namespace std;
 
 string ParseEvent(istream& is) {
-  // Реализуйте эту функцию
+  string event;
+  while (is.peek() == ' ') {
+    is.ignore(1);
+  }
+  getline(is, event);
+  return event;
 }
 
 void TestAll();

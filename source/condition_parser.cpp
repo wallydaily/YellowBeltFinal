@@ -4,7 +4,8 @@
 #include <map>
 using namespace std;
 
-template <class It> shared_ptr<Node> ParseComparison(It& current, It end) {
+template <class It>
+shared_ptr<Node> ParseComparison(It& current, It end) {
   if (current == end) {
     throw logic_error("Expected column name: date or event");
   }
